@@ -1,0 +1,13 @@
+name: Scheduled Workflow
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Scheduled Time
+        run: echo "Workflow executed at $(date)"
