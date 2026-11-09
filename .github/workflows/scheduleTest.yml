@@ -1,0 +1,13 @@
+name: Scheduled Workflow
+
+on:
+  schedule:
+    - cron: '*/6 * * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Execute Task
+        run: echo "Executed every 6 minutes"
