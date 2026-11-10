@@ -1,0 +1,21 @@
+
+name: Dev Branch Push Workflow
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Display Branch
+        run: echo "Branch is ${{ github.ref_name }}"
+
+      - name: Execute Task
+        run: echo "Code pushed to dev successfully!"
